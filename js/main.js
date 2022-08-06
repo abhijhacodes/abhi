@@ -4,9 +4,17 @@ const funfacts = document.querySelector("#fun-facts");
 const aboutContent = document.querySelector("#about-content");
 const contactContent = document.querySelector("#contact-content");
 const factContent = document.querySelector("#fact-content");
+const funfacts_win = document.querySelector("#funfacts_win")
+const about_win = document.querySelector("#about_win")
+const contact_win = document.querySelector("#contact_win")
 
 about.addEventListener("click", () => {
+  if(about_win){
+    about_win.click()
+    return;
+  }
   const aboutBox = new WinBox({
+    id:"about_win",
     title: "About Me",
     background: "#00aa00",
     width: "500px",
@@ -26,7 +34,12 @@ about.addEventListener("click", () => {
 });
 
 contact.addEventListener("click", () => {
+  if(contact_win){
+    contact_win.click()
+    return;
+  }
   const contactBox = new WinBox({
+    id:"contact_win",
     title: "Contact Me",
     background: "#00aa00",
     width: "500px",
@@ -46,7 +59,12 @@ contact.addEventListener("click", () => {
 });
 
 funfacts.addEventListener("click", () => {
+  if(funfacts_win){
+    funfacts_win.click()
+    return;
+  }
   const factBox = new WinBox({
+    id:"funfacts_win",
     title: "Fun Facts",
     background: "#00aa00",
     width: "500px",
